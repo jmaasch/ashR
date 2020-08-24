@@ -1,6 +1,6 @@
 # `ashR`
 
-### `ashR` (ash-er): Bespoke interpolated color palettes for data visualization in R.
+### `ashR` *(ash-er)*: Bespoke interpolated color palettes for data visualization in R.
 
 ![density_grid](https://github.com/jmaasch/ashR/blob/master/figures/density_grid.jpg)
 
