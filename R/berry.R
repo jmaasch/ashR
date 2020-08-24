@@ -11,18 +11,18 @@ berry <- list(
             "#B77FA1FF", "#C99FB8FF", "#DBBFD0FF", "#EDDFE7FF"),
   "4.8" = c("#9E194DFF", "#AA3563FF", "#B65279FF", "#C26F8FFF", 
             "#CE8CA5FF", "#DAA8BCFF", "#E6C5D2FF", "#F2E2E8FF"),
-  "5.8" = c("#4F2463FF", "#643B76FF", "#7A528AFF", "#8F699DFF",
-            "#A580B1FF", "#BB97C4FF", "#D0AED8FF", "#E6C5EBFF"),
+  "5.8" = c("#402070FF", "#542267FF", "#68245EFF", "#7C2755FF",
+            "#90294CFF", "#A42C43FF", "#B82E3AFF", "#CD3131FF"),
   "1.5" = c("#573369FF", "#785B87FF", "#9A84A5FF", "#BBADC3FF", "#DDD6E1FF"),
   "2.5" = c("#6B2E63FF", "#885782FF", "#A681A1FF", "#C3ABC0FF", "#E1D5DFFF"),
   "3.5" = c("#6F0043FF", "#8B3368FF", "#A8668EFF", "#C599B3FF", "#E2CCD9FF"),
   "4.5" = c("#9E194DFF", "#B14770FF", "#C47594FF", "#D8A3B7FF", "#EBD1DBFF"),
-  "5.5" = c("#4F2463FF", "#714882FF", "#946DA1FF", "#B692C0FF", "#D9B7DFFF"),
+  "5.5" = c("#402070FF", "#632460FF", "#862850FF", "#A92C40FF", "#CD3131FF"),
   "1.3" = c("#573369FF", "#8F779BFF", "#C7BBCDFF"),
   "2.3" = c("#6B2E63FF", "#9C7397FF", "#CDB9CBFF"),
   "3.3" = c("#6F0043FF", "#9F5581FF", "#CFAAC0FF"),
   "4.3" = c("#9E194DFF", "#BE6588FF", "#DEB2C3FF"),
-  "5.3" = c("#4F2463FF", "#886197FF", "#C29ECBFF")
+  "5.3" = c("#402070FF", "#862850FF", "#CD3131FF")
 )
 
 #' Generate berry-tone color palette.
