@@ -73,12 +73,15 @@ density_plot <- ggplot(diamonds, aes(carat, fill = cut)) +
 
 ### Use with base R
 
+<img src="https://github.com/jmaasch/ashR/blob/master/figures/base_scatterplot.jpg" width="500" align="right"/>
+
 The following reproducible example produces the plot below.
 
 
-<img src="https://github.com/jmaasch/ashR/blob/master/figures/base_scatterplot.jpg" width="500" align="right"/>
-
 ```r
+
+x <- rnorm(800)
+y <- rnorm(800) 
 
 plot(x, 
      y, 
