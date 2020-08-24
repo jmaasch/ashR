@@ -34,7 +34,7 @@ library(ashR)
 
 ### View documentation
 
-Precede any function by a question mark to access description, arguments, return value, and usage suggestions.
+Precede any function by a question mark to access description, arguments, return value, and usage suggestions. **Vignette and further documentation coming soon.**
 
 ```R
 # Access function documentation.
