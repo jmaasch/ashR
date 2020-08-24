@@ -81,6 +81,8 @@ ashR.berry.demo <- function(palette_name) {
                      Label = c(1, 2, 3))
   }
   
+  df$Label <- as.factor(df$Label)
+  
   # If input is "all", print all demo plots.
   if (palette_name == "all") {
     for (palette in names(berry)) {
@@ -97,6 +99,8 @@ ashR.berry.demo <- function(palette_name) {
         df <- data.frame(Value = c(4, 6, 9),
                          Label = c(1, 2, 3))
       }
+      
+      df$Label <- as.factor(df$Label)
 
       current_plot <- ggplot2::ggplot(df, 
                                       ggplot2::aes(x = Label, 
