@@ -103,7 +103,7 @@ ashR.berry.demo <- function(palette_name) {
                         main = paste("Berry ", palette),
                         ylim = c(0, 10), 
                         border = NA)
-      graphics::legend("left",
+      graphics::legend("right",
                        legend = berry[[palette]], 
                        xpd = TRUE,
                        col = berry[[palette]],
@@ -121,7 +121,7 @@ ashR.berry.demo <- function(palette_name) {
                     main = paste("Berry ", palette_name),
                     ylim = c(0, 10), 
                     border = NA)
-  graphics::legend("left",
+  graphics::legend("right",
                    legend = berry[[palette]], 
                    xpd = TRUE,
                    col = berry[[palette]],
