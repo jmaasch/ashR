@@ -72,11 +72,11 @@ ashR.berry.demo <- function(palette_name) {
   df <- data.frame(Value = c(4, 6, 3, 7, 2, 5, 8, 9),
                    Label = c(1, 2, 3, 4, 5, 6, 7, 8))
   
-  if (grepl(palette_name, ".5", fixed = TRUE)) {
+  if (grepl(".5", palette_name, fixed = TRUE)) {
     df <- data.frame(Value = c(4, 6, 3, 7, 2),
                      Label = c(1, 2, 3, 4, 5))
   }
-  else if (grepl(palette_name, ".3", fixed = TRUE)) {
+  else if (grepl(".3", palette_name, fixed = TRUE)) {
     df <- data.frame(Value = c(4, 6, 3),
                      Label = c(1, 2, 3))
   }
@@ -85,22 +85,22 @@ ashR.berry.demo <- function(palette_name) {
   if (palette_name == "all") {
     for (palette in berry) {
       
-      if (grepl(palette_name, ".8", fixed = TRUE)) {
+      if (grepl(".8", palette_name, fixed = TRUE)) {
         df <- data.frame(Value = c(4, 6, 3, 7, 2, 5, 8, 9),
                          Label = c(1, 2, 3, 4, 5, 6, 7, 8))
       }
-      else if (grepl(palette_name, ".5", fixed = TRUE)) {
+      else if (grepl(".5", palette_name, fixed = TRUE)) {
         df <- data.frame(Value = c(4, 6, 3, 7, 2),
                          Label = c(1, 2, 3, 4, 5))
       }
-      else if (grepl(palette_name, ".3", fixed = TRUE)) {
+      else if (grepl(".3", palette_name, fixed = TRUE)) {
         df <- data.frame(Value = c(4, 6, 3),
                          Label = c(1, 2, 3))
       }
-      
+
       graphics::barplot(df$Value, 
-                        col = berry[[palette_name]], 
-                        main = paste("Berry ", palette_name),
+                        col = berry[[palette]], 
+                        main = paste("Berry ", palette),
                         ylim = c(0, 10), 
                         border = NA)
     }
