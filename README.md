@@ -15,7 +15,7 @@ This package provides made-to-order discrete color palettes in an interpolated r
 
 Bespoke color palette packages can expedite data visualization tasks. If you would like your own bespoke package, message me at www.linkedin.com/in/jmaasch.
 
-![density_grid](https://github.com/jmaasch/ashR/blob/master/figures/ridge_grid.jpg)
+![ridge_grid](https://github.com/jmaasch/ashR/blob/master/figures/ridge_grid.jpg)
 
 *Note on accessibility: These color palettes were customized for use by a color-blind data scientist, though we cannot guarantee usefulness for all color-blind individuals.*
 
@@ -49,6 +49,25 @@ Precede any function by a question mark to access description, arguments, return
 ```
 
 &#8593; [return to top](#ashR)
+
+### Use with `ggplot2`
+
+The following reproducible example produces plots as demonstrated below.
+
+```r
+
+density_plot <- ggplot(diamonds, aes(carat, fill = cut)) +
+                geom_density(position = "stack") +
+                theme_classic() +
+                xlim(0, 3) +
+                scale_fill_manual(values = ashR.earth("5.5")) +
+                theme(axis.title = element_blank(),
+        legend.position = "none") +
+                labs(title = "Earth 5.5")
+
+```
+
+![density_grid](https://github.com/jmaasch/ashR/blob/master/figures/density_grid2.jpg)
 
 ## View demo plots
 
