@@ -4,18 +4,18 @@
 
 Author: JRMA Maasch (2020).
 
-**Note: This package is currently under development.**
-
 ## About
 
-This package provides made-to-order discrete color palettes in an interpolated range. Bespoke color palette packages can expedite data visualization tasks. If you would like your own bespoke package, message me at www.linkedin.com/in/jmaasch.
+This package provides made-to-order discrete color palettes in an interpolated range. These low-contrast color palettes are intended for use cases in which subtle variation is desired. **Note: This package is currently under development.**
+
+Bespoke color palette packages can expedite data visualization tasks. If you would like your own bespoke package, message me at www.linkedin.com/in/jmaasch.
+
+*Note on accessibility: These color palettes were customized for use by a color-blind data scientist, though we cannot guarantee usefulness for all color-blind individuals.*
 
 ### Table of contents
 
-* [Usage](#Usage)
-  - [Installation](#Installation)
-  - [View documentation](#View-documentation)
-* [View demo plots](#View-demo-plots)
+* **[Usage](#Usage)** | [Installation](#Installation) | [View documentation](#View-documentation)
+* **[View demo plots](#View-demo-plots)**
 
 ## Usage
 
