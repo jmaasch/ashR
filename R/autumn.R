@@ -61,6 +61,103 @@ autumn <- list(
 #' @export
 #'
 ashR.autumn <- function(palette_name) {
-  palette <- autumn[[palette_name]]
-  return(palette)
+
+  return(autumn[[palette_name]])
+
+}
+
+#' Print a demo plot for autumn-tone color palette.
+#'
+#' @param palette_name The short ID for the palette, e.g. "1.8".
+#'
+#' @return Void.
+#'
+#' @examples
+#' # Print demo plot for single autumn palette.
+#' ashR.autumn("5.5")
+#'
+#' # Print demo plots for all autumn palettes.
+#' ashR.autumn("all")
+#'
+#' @export
+#'
+ashR.autumn.demo <- function(palette_name) {
+
+  # Construct dataframe.
+  df <- data.frame(Value = c(4, 6, 3, 7, 2, 5, 8, 9),
+                   Label = c(1, 2, 3, 4, 5, 6, 7, 8))
+
+  if (grepl(".5", palette_name, fixed = TRUE)) {
+    df <- data.frame(Value = c(4, 6, 3, 7, 9),
+                     Label = c(1, 2, 3, 4, 5))
+  }
+  else if (grepl(".3", palette_name, fixed = TRUE)) {
+    df <- data.frame(Value = c(4, 6, 9),
+                     Label = c(1, 2, 3))
+  }
+
+  df$Label <- as.factor(df$Label)
+
+  # If input is "all", print all demo plots.
+  if (palette_name == "all") {
+    for (palette in names(autumn)) {
+
+      if (grepl(".8", palette, fixed = TRUE)) {
+        df <- data.frame(Value = c(4, 6, 3, 7, 2, 5, 8, 9),
+                         Label = c(1, 2, 3, 4, 5, 6, 7, 8))
+      }
+      else if (grepl(".5", palette, fixed = TRUE)) {
+        df <- data.frame(Value = c(4, 6, 3, 7, 9),
+                         Label = c(1, 2, 3, 4, 5))
+      }
+      else if (grepl(".3", palette, fixed = TRUE)) {
+        df <- data.frame(Value = c(4, 6, 9),
+                         Label = c(1, 2, 3))
+      }
+
+      df$Label <- as.factor(df$Label)
+
+      current_plot <- ggplot2::ggplot(df,
+                                      ggplot2::aes(x = Label,
+                                                   y = Value)) +
+        ggplot2::geom_bar(stat = "identity",
+                          ggplot2::aes(fill = Label)) +
+        ggthemes::theme_tufte() +
+        ggplot2::scale_fill_manual(values = autumn[[palette]],
+                                   labels = autumn[[palette]]) +
+        ggplot2::theme(axis.title.x = ggplot2::element_blank(),
+                       axis.title.y = ggplot2::element_blank(),
+                       legend.title = ggplot2::element_blank(),
+                       plot.title = ggplot2::element_text(face = "bold",
+                                                          size = 16)) +
+        ggplot2::labs(title = paste("autumn ", palette))
+
+      print(current_plot)
+
+    }
+
+    return(invisible())
+
+  }
+
+  # Else print single demo plot.
+  single_plot <- ggplot2::ggplot(df,
+                                 ggplot2::aes(x = Label,
+                                              y = Value)) +
+    ggplot2::geom_bar(stat = "identity",
+                      ggplot2::aes(fill = Label)) +
+    ggthemes::theme_tufte() +
+    ggplot2::scale_fill_manual(values = autumn[[palette_name]],
+                               labels = autumn[[palette_name]]) +
+    ggplot2::theme(axis.title.x = ggplot2::element_blank(),
+                   axis.title.y = ggplot2::element_blank(),
+                   legend.title = ggplot2::element_blank(),
+                   plot.title = ggplot2::element_text(face = "bold",
+                                                      size = 16)) +
+    ggplot2::labs(title = paste("autumn ", palette_name))
+
+  print(single_plot)
+
+  return(invisible())
+
 }

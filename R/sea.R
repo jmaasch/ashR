@@ -34,3 +34,125 @@ sea <- list(
   "4.3" = c(),
   "5.3" = c()
 )
+
+#' Generate watery color palette.
+#'
+#' @param palette_name The short ID for the palette, e.g. "1.8".
+#'
+#' @return A vector of hexademicals of length 3, 5, or 8.
+#'
+#' @examples
+#' # Assign palette to a name.
+#' my_palette <- ashR.sea("5.5")
+#'
+#' # Concatenate two palettes for a larger custom palette.
+#' custom <- c(ashR.sea("2.8"), ashR.sea("3.8"))
+#'
+#' # Use with base R.
+#' plot(iris$Sepal.Width,
+#'      iris$Sepal.Length,
+#'      col = ashR.sea("1.5"))
+#'
+#' @export
+#'
+ashR.sea <- function(palette_name) {
+  
+  return(sea[[palette_name]])
+  
+}
+
+#' Print a demo plot for watery-tone color palette.
+#'
+#' @param palette_name The short ID for the palette, e.g. "1.8".
+#'
+#' @return Void.
+#'
+#' @examples
+#' # Print demo plot for single sea palette.
+#' ashR.sea("5.5")
+#' 
+#' # Print demo plots for all sea palettes.
+#' ashR.sea("all")
+#'
+#' @export
+#'
+ashR.sea.demo <- function(palette_name) {
+  
+  # Construct dataframe.
+  df <- data.frame(Value = c(4, 6, 3, 7, 2, 5, 8, 9),
+                   Label = c(1, 2, 3, 4, 5, 6, 7, 8))
+  
+  if (grepl(".5", palette_name, fixed = TRUE)) {
+    df <- data.frame(Value = c(4, 6, 3, 7, 9),
+                     Label = c(1, 2, 3, 4, 5))
+  }
+  else if (grepl(".3", palette_name, fixed = TRUE)) {
+    df <- data.frame(Value = c(4, 6, 9),
+                     Label = c(1, 2, 3))
+  }
+  
+  df$Label <- as.factor(df$Label)
+  
+  # If input is "all", print all demo plots.
+  if (palette_name == "all") {
+    for (palette in names(sea)) {
+      
+      if (grepl(".8", palette, fixed = TRUE)) {
+        df <- data.frame(Value = c(4, 6, 3, 7, 2, 5, 8, 9),
+                         Label = c(1, 2, 3, 4, 5, 6, 7, 8))
+      }
+      else if (grepl(".5", palette, fixed = TRUE)) {
+        df <- data.frame(Value = c(4, 6, 3, 7, 9),
+                         Label = c(1, 2, 3, 4, 5))
+      }
+      else if (grepl(".3", palette, fixed = TRUE)) {
+        df <- data.frame(Value = c(4, 6, 9),
+                         Label = c(1, 2, 3))
+      }
+      
+      df$Label <- as.factor(df$Label)
+      
+      current_plot <- ggplot2::ggplot(df, 
+                                      ggplot2::aes(x = Label, 
+                                                   y = Value)) +
+        ggplot2::geom_bar(stat = "identity", 
+                          ggplot2::aes(fill = Label)) +
+        ggthemes::theme_tufte() +
+        ggplot2::scale_fill_manual(values = sea[[palette]], 
+                                   labels = sea[[palette]]) +
+        ggplot2::theme(axis.title.x = ggplot2::element_blank(),
+                       axis.title.y = ggplot2::element_blank(),
+                       legend.title = ggplot2::element_blank(),
+                       plot.title = ggplot2::element_text(face = "bold",
+                                                          size = 16)) +
+        ggplot2::labs(title = paste("sea ", palette))
+      
+      print(current_plot)
+      
+    }
+    
+    return(invisible())
+    
+  }
+  
+  # Else print single demo plot.
+  single_plot <- ggplot2::ggplot(df, 
+                                 ggplot2::aes(x = Label, 
+                                              y = Value)) +
+    ggplot2::geom_bar(stat = "identity", 
+                      ggplot2::aes(fill = Label)) +
+    ggthemes::theme_tufte() +
+    ggplot2::scale_fill_manual(values = sea[[palette_name]], 
+                               labels = sea[[palette_name]]) +
+    ggplot2::theme(axis.title.x = ggplot2::element_blank(),
+                   axis.title.y = ggplot2::element_blank(),
+                   legend.title = ggplot2::element_blank(),
+                   plot.title = ggplot2::element_text(face = "bold",
+                                                      size = 16)) +
+    ggplot2::labs(title = paste("sea ", palette_name))
+  
+  print(single_plot)
+  
+  return(invisible())
+  
+}

@@ -46,6 +46,103 @@ earth <- list(
 #' @export
 #'
 ashR.earth <- function(palette_name) {
-  palette <- earth[[palette_name]]
-  return(palette)
+  
+  return(earth[[palette_name]])
+  
+}
+
+#' Print a demo plot for earth-tone color palette.
+#'
+#' @param palette_name The short ID for the palette, e.g. "1.8".
+#'
+#' @return Void.
+#'
+#' @examples
+#' # Print demo plot for single earth palette.
+#' ashR.earth("5.5")
+#' 
+#' # Print demo plots for all earth palettes.
+#' ashR.earth("all")
+#'
+#' @export
+#'
+ashR.earth.demo <- function(palette_name) {
+  
+  # Construct dataframe.
+  df <- data.frame(Value = c(4, 6, 3, 7, 2, 5, 8, 9),
+                   Label = c(1, 2, 3, 4, 5, 6, 7, 8))
+  
+  if (grepl(".5", palette_name, fixed = TRUE)) {
+    df <- data.frame(Value = c(4, 6, 3, 7, 9),
+                     Label = c(1, 2, 3, 4, 5))
+  }
+  else if (grepl(".3", palette_name, fixed = TRUE)) {
+    df <- data.frame(Value = c(4, 6, 9),
+                     Label = c(1, 2, 3))
+  }
+  
+  df$Label <- as.factor(df$Label)
+  
+  # If input is "all", print all demo plots.
+  if (palette_name == "all") {
+    for (palette in names(earth)) {
+      
+      if (grepl(".8", palette, fixed = TRUE)) {
+        df <- data.frame(Value = c(4, 6, 3, 7, 2, 5, 8, 9),
+                         Label = c(1, 2, 3, 4, 5, 6, 7, 8))
+      }
+      else if (grepl(".5", palette, fixed = TRUE)) {
+        df <- data.frame(Value = c(4, 6, 3, 7, 9),
+                         Label = c(1, 2, 3, 4, 5))
+      }
+      else if (grepl(".3", palette, fixed = TRUE)) {
+        df <- data.frame(Value = c(4, 6, 9),
+                         Label = c(1, 2, 3))
+      }
+      
+      df$Label <- as.factor(df$Label)
+      
+      current_plot <- ggplot2::ggplot(df, 
+                                      ggplot2::aes(x = Label, 
+                                                   y = Value)) +
+        ggplot2::geom_bar(stat = "identity", 
+                          ggplot2::aes(fill = Label)) +
+        ggthemes::theme_tufte() +
+        ggplot2::scale_fill_manual(values = earth[[palette]], 
+                                   labels = earth[[palette]]) +
+        ggplot2::theme(axis.title.x = ggplot2::element_blank(),
+                       axis.title.y = ggplot2::element_blank(),
+                       legend.title = ggplot2::element_blank(),
+                       plot.title = ggplot2::element_text(face = "bold",
+                                                          size = 16)) +
+        ggplot2::labs(title = paste("earth ", palette))
+      
+      print(current_plot)
+      
+    }
+    
+    return(invisible())
+    
+  }
+  
+  # Else print single demo plot.
+  single_plot <- ggplot2::ggplot(df, 
+                                 ggplot2::aes(x = Label, 
+                                              y = Value)) +
+    ggplot2::geom_bar(stat = "identity", 
+                      ggplot2::aes(fill = Label)) +
+    ggthemes::theme_tufte() +
+    ggplot2::scale_fill_manual(values = earth[[palette_name]], 
+                               labels = earth[[palette_name]]) +
+    ggplot2::theme(axis.title.x = ggplot2::element_blank(),
+                   axis.title.y = ggplot2::element_blank(),
+                   legend.title = ggplot2::element_blank(),
+                   plot.title = ggplot2::element_text(face = "bold",
+                                                      size = 16)) +
+    ggplot2::labs(title = paste("earth ", palette_name))
+  
+  print(single_plot)
+  
+  return(invisible())
+  
 }

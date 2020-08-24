@@ -112,7 +112,9 @@ ashR.berry.demo <- function(palette_name) {
                                                  labels = berry[[palette]]) +
                       ggplot2::theme(axis.title.x = ggplot2::element_blank(),
                                      axis.title.y = ggplot2::element_blank(),
-                                     legend.title = ggplot2::element_blank()) +
+                                     legend.title = ggplot2::element_blank(),
+                                     plot.title = ggplot2::element_text(face = "bold",
+                                                                        size = 16)) +
                       ggplot2::labs(title = paste("Berry ", palette))
       
       print(current_plot)
@@ -134,7 +136,9 @@ ashR.berry.demo <- function(palette_name) {
                                            labels = berry[[palette_name]]) +
                 ggplot2::theme(axis.title.x = ggplot2::element_blank(),
                                axis.title.y = ggplot2::element_blank(),
-                               legend.title = ggplot2::element_blank()) +
+                               legend.title = ggplot2::element_blank(),
+                               plot.title = ggplot2::element_text(face = "bold",
+                                                                  size = 16)) +
                 ggplot2::labs(title = paste("Berry ", palette_name))
   
   print(single_plot)
