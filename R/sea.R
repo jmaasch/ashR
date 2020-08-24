@@ -125,7 +125,7 @@ ashR.sea.demo <- function(palette_name) {
                        legend.title = ggplot2::element_blank(),
                        plot.title = ggplot2::element_text(face = "bold",
                                                           size = 16)) +
-        ggplot2::labs(title = paste("sea ", palette))
+        ggplot2::labs(title = paste("Sea ", palette))
       
       print(current_plot)
       
@@ -149,7 +149,7 @@ ashR.sea.demo <- function(palette_name) {
                    legend.title = ggplot2::element_blank(),
                    plot.title = ggplot2::element_text(face = "bold",
                                                       size = 16)) +
-    ggplot2::labs(title = paste("sea ", palette_name))
+    ggplot2::labs(title = paste("Sea ", palette_name))
   
   print(single_plot)
   

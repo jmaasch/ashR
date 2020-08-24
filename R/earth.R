@@ -115,7 +115,7 @@ ashR.earth.demo <- function(palette_name) {
                        legend.title = ggplot2::element_blank(),
                        plot.title = ggplot2::element_text(face = "bold",
                                                           size = 16)) +
-        ggplot2::labs(title = paste("earth ", palette))
+        ggplot2::labs(title = paste("Earth ", palette))
       
       print(current_plot)
       
@@ -139,7 +139,7 @@ ashR.earth.demo <- function(palette_name) {
                    legend.title = ggplot2::element_blank(),
                    plot.title = ggplot2::element_text(face = "bold",
                                                       size = 16)) +
-    ggplot2::labs(title = paste("earth ", palette_name))
+    ggplot2::labs(title = paste("Earth ", palette_name))
   
   print(single_plot)
   
