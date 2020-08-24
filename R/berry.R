@@ -73,28 +73,28 @@ ashR.berry.demo <- function(palette_name) {
                    Label = c(1, 2, 3, 4, 5, 6, 7, 8))
   
   if (grepl(".5", palette_name, fixed = TRUE)) {
-    df <- data.frame(Value = c(4, 6, 3, 7, 2),
+    df <- data.frame(Value = c(4, 6, 3, 7, 9),
                      Label = c(1, 2, 3, 4, 5))
   }
   else if (grepl(".3", palette_name, fixed = TRUE)) {
-    df <- data.frame(Value = c(4, 6, 3),
+    df <- data.frame(Value = c(4, 6, 9),
                      Label = c(1, 2, 3))
   }
   
   # If input is "all", print all demo plots.
   if (palette_name == "all") {
-    for (palette in berry) {
+    for (palette in names(berry)) {
       
-      if (grepl(".8", palette_name, fixed = TRUE)) {
+      if (grepl(".8", palette, fixed = TRUE)) {
         df <- data.frame(Value = c(4, 6, 3, 7, 2, 5, 8, 9),
                          Label = c(1, 2, 3, 4, 5, 6, 7, 8))
       }
-      else if (grepl(".5", palette_name, fixed = TRUE)) {
-        df <- data.frame(Value = c(4, 6, 3, 7, 2),
+      else if (grepl(".5", palette, fixed = TRUE)) {
+        df <- data.frame(Value = c(4, 6, 3, 7, 9),
                          Label = c(1, 2, 3, 4, 5))
       }
-      else if (grepl(".3", palette_name, fixed = TRUE)) {
-        df <- data.frame(Value = c(4, 6, 3),
+      else if (grepl(".3", palette, fixed = TRUE)) {
+        df <- data.frame(Value = c(4, 6, 9),
                          Label = c(1, 2, 3))
       }
 
@@ -103,8 +103,13 @@ ashR.berry.demo <- function(palette_name) {
                         main = paste("Berry ", palette),
                         ylim = c(0, 10), 
                         border = NA)
+      graphics::legend("bottom", 
+                       legend = berry[[palette]], 
+                       horiz = TRUE, 
+                       xpd = TRUE,
+                       col = berry[[palette]])
     }
-    return()
+    return(invisible())
   }
   
   # Else print single demo plot.
@@ -113,6 +118,11 @@ ashR.berry.demo <- function(palette_name) {
                     main = paste("Berry ", palette_name),
                     ylim = c(0, 10), 
                     border = NA)
-  return()
+  graphics::legend("bottom", 
+                   legend = berry[[palette]], 
+                   horiz = TRUE, 
+                   xpd = TRUE,
+                   col = berry[[palette]])
+  return(invisible())
   
 }
