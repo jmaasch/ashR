@@ -14,7 +14,7 @@ Built by JRMA Maasch (2020). *This package is licensed under the GNU General Pub
 
 ## About
 
-This package provides made-to-order discrete color palettes in an interpolated range. These low-contrast color palettes are intended for use cases in which subtle variation is desired. **Note: This package is currently under development.**
+This package provides 60 made-to-order discrete color palettes in an interpolated range. These low-contrast color palettes are intended for use cases in which subtle variation is desired. **Note: This package is currently under development.**
 
 Bespoke color palette packages can expedite data visualization tasks. If you would like your own bespoke package, message me at www.linkedin.com/in/jmaasch.
 
