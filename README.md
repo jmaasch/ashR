@@ -8,6 +8,11 @@ Author: JRMA Maasch (2020).
 
 *This package is licensed under the GNU General Public License v3.0 (<a href="https://choosealicense.com/licenses/gpl-3.0/" target="_blank">GPL-3</a>).*
 
+### Table of contents
+
+* **[About](#About)**
+* **[Usage](#Usage)** &nbsp; | &nbsp; [Installation](#Installation) &nbsp; | &nbsp; [View documentation](#View-documentation) &nbsp; | &nbsp; [Use with ggplot2](#Use-with-ggplot2) &nbsp; | &nbsp; [Use with base R](#Use-with-base-R)
+* **[View demo plots](#View-demo-plots)** &nbsp; | &nbsp; [Autumn](#Autumn) &nbsp; | &nbsp; [Sea](#Sea) &nbsp; | &nbsp; [Earth](#Earth) &nbsp; | &nbsp; [Berry](#Berry)
 
 ## About
 
@@ -18,11 +23,6 @@ Bespoke color palette packages can expedite data visualization tasks. If you wou
 ![ridge_grid](https://github.com/jmaasch/ashR/blob/master/figures/ridge_grid.jpg)
 
 *Note on accessibility: These color palettes were customized for use by a color-blind data scientist, though we cannot guarantee usefulness for all color-blind individuals.*
-
-### Table of contents
-
-* **[Usage](#Usage)** &nbsp; | &nbsp; [Installation](#Installation) &nbsp; | &nbsp; [View documentation](#View-documentation) &nbsp; | &nbsp; [Use with ggplot2](#Use-with-ggplot2) &nbsp; | &nbsp; [Use with base R](#Use-with-base-R)
-* **[View demo plots](#View-demo-plots)** &nbsp; | &nbsp; [Autumn](#Autumn) &nbsp; | &nbsp; [Sea](#Sea) &nbsp; | &nbsp; [Earth](#Earth) &nbsp; | &nbsp; [Berry](#Berry)
 
 ## Usage
 
@@ -73,7 +73,7 @@ density_plot <- ggplot(diamonds, aes(carat, fill = cut)) +
 
 ### Use with base R
 
-<img src="https://github.com/jmaasch/ashR/blob/master/figures/base_scatterplot.jpg" width="500" align="right"/>
+<img src="https://github.com/jmaasch/ashR/blob/master/figures/base_scatterplot.jpg" width="400" align="right"/>
 
 The following reproducible example produces the plot below.
 
