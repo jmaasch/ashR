@@ -55,7 +55,7 @@ ashR.autumn <- function(palette_name) {
 #'
 #' @param palette_name The short ID for the palette, e.g. "1.8".
 #'
-#' @return Void.
+#' @return Single plot or list of all plots as ggplot2 objects.
 #'
 #' @examples
 #' # Print demo plot for single autumn palette.
@@ -83,6 +83,10 @@ ashR.autumn.demo <- function(palette_name) {
     df3 <- data.frame(Value = c(4, 6, 9),
                       Label = c(1, 2, 3))
     df3$Label <- as.factor(df3$Label)
+
+    # Init empty list for plots.
+    plot_list <- vector("list", 15)
+    i <- 1
 
     # Loop through all palettes.
     for (palette in names(autumn)) {
@@ -115,9 +119,15 @@ ashR.autumn.demo <- function(palette_name) {
 
       print(current_plot)
 
+      # Update plot list.
+      plot_list[[i]] <- current_plot
+      i <- i + 1
+
+      print(current_plot)
+
     }
 
-    return(invisible())
+    return(current_plot)
 
   }
 
@@ -152,6 +162,6 @@ ashR.autumn.demo <- function(palette_name) {
 
   print(single_plot)
 
-  return(invisible())
+  return(single_plot)
 
 }
