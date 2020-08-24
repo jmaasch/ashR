@@ -111,7 +111,7 @@ ashR.berry.demo <- function(palette_name) {
                                      legend.title = ggplot2::element_blank()) +
                       ggplot2::labs(title = paste("Berry ", palette))
       
-      current_plot
+      print(current_plot)
       
     }
     
@@ -133,7 +133,7 @@ ashR.berry.demo <- function(palette_name) {
                                legend.title = ggplot2::element_blank()) +
                 ggplot2::labs(title = paste("Berry ", palette_name))
   
-  single_plot
+  print(single_plot)
   
   return(invisible())
   
