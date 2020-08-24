@@ -2,11 +2,13 @@
 
 Bespoke interpolated color palettes for data visualization in R.
 
+**Note: This package is currently under development.**
+
 Author: JRMA Maasch (2020).
 
 ## About
 
-This package provides bespoke discrete color palettes in an interpolated range. Bespoke color palette packages can expedite data visualization tasks. If you would like your own bespoke package, message me at www.linkedin.com/in/jmaasch.
+This package provides a custom- discrete color palettes in an interpolated range. Bespoke color palette packages can expedite data visualization tasks. If you would like your own bespoke package, message me at www.linkedin.com/in/jmaasch.
 
 ## Usage
 
