@@ -43,5 +43,5 @@ Precede any function by a question mark to access description, arguments, return
 
 ![autumn_grid](https://github.com/jmaasch/ashR/blob/master/figures/autumn_grid.jpg)
 ![sea_grid](https://github.com/jmaasch/ashR/blob/master/figures/sea_grid.jpg)
-![earth_grid](https://github.com/jmaasch/ashR/blob/master/figures/eart_grid.jpg)
+![earth_grid](https://github.com/jmaasch/ashR/blob/master/figures/earth_grid.jpg)
 ![berry_grid](https://github.com/jmaasch/ashR/blob/master/figures/berry_grid.jpg)
