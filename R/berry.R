@@ -98,18 +98,20 @@ ashR.berry.demo <- function(palette_name) {
                          Label = c(1, 2, 3))
       }
 
-      ggplot2::ggplot(df, 
-                      ggplot2::aes(x = Label, 
-                                   y = Value)) +
-      ggplot2::geom_bar(stat = "identity", 
-                        ggplot2::aes(fill = Label)) +
-      ggthemes::theme_tufte() +
-      ggplot2::scale_fill_manual(values = berry[[palette]], 
-                                 labels = berry[[palette]]) +
-      ggplot2::theme(axis.title.x = ggplot2::element_blank(),
-                     axis.title.y = ggplot2::element_blank(),
-                     legend.title = ggplot2::element_blank()) +
-      ggplot2::labs(title = paste("Berry ", palette))
+      current_plot <- ggplot2::ggplot(df, 
+                                      ggplot2::aes(x = Label, 
+                                                   y = Value)) +
+                      ggplot2::geom_bar(stat = "identity", 
+                                        ggplot2::aes(fill = Label)) +
+                      ggthemes::theme_tufte() +
+                      ggplot2::scale_fill_manual(values = berry[[palette]], 
+                                                 labels = berry[[palette]]) +
+                      ggplot2::theme(axis.title.x = ggplot2::element_blank(),
+                                     axis.title.y = ggplot2::element_blank(),
+                                     legend.title = ggplot2::element_blank()) +
+                      ggplot2::labs(title = paste("Berry ", palette))
+      
+      current_plot
       
     }
     
@@ -118,18 +120,20 @@ ashR.berry.demo <- function(palette_name) {
   }
   
   # Else print single demo plot.
-  ggplot2::ggplot(df, 
-                  ggplot2::aes(x = Label, 
-                               y = Value)) +
-  ggplot2::geom_bar(stat = "identity", 
-                    ggplot2::aes(fill = Label)) +
-  ggthemes::theme_tufte() +
-  ggplot2::scale_fill_manual(values = berry[[palette_name]], 
-                             labels = berry[[palette_name]]) +
-  ggplot2::theme(axis.title.x = ggplot2::element_blank(),
-                 axis.title.y = ggplot2::element_blank(),
-                 legend.title = ggplot2::element_blank()) +
-  ggplot2::labs(title = paste("Berry ", palette_name))
+  single_plot <- ggplot2::ggplot(df, 
+                                 ggplot2::aes(x = Label, 
+                                              y = Value)) +
+                ggplot2::geom_bar(stat = "identity", 
+                                  ggplot2::aes(fill = Label)) +
+                ggthemes::theme_tufte() +
+                ggplot2::scale_fill_manual(values = berry[[palette_name]], 
+                                           labels = berry[[palette_name]]) +
+                ggplot2::theme(axis.title.x = ggplot2::element_blank(),
+                               axis.title.y = ggplot2::element_blank(),
+                               legend.title = ggplot2::element_blank()) +
+                ggplot2::labs(title = paste("Berry ", palette_name))
+  
+  single_plot
   
   return(invisible())
   
