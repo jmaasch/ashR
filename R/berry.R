@@ -108,7 +108,9 @@ ashR.berry.demo <- function(palette_name) {
                        xpd = TRUE,
                        col = berry[[palette]],
                        pch = 15, 
-                       bty = "n")
+                       bty = "n",
+                       lty = 1,
+                       inset = c(-0.17,0))
     }
     return(invisible())
   }
@@ -124,7 +126,9 @@ ashR.berry.demo <- function(palette_name) {
                    xpd = TRUE,
                    col = berry[[palette]],
                    pch = 15, 
-                   bty = "n")
+                   bty = "n",
+                   lty = 1,
+                   inset = c(-0.17,0))
   return(invisible())
   
 }
