@@ -127,7 +127,7 @@ ashR.sea.demo <- function(palette_name) {
       
     }
     
-    return(current_plot)
+    return(plot_list)
     
   }
   

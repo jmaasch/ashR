@@ -123,7 +123,7 @@ ashR.berry.demo <- function(palette_name) {
       plot_list[[i]] <- current_plot
       i <- i + 1
       
-      print(current_plot)
+      print(plot_list)
       
     }
     
