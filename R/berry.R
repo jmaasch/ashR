@@ -103,14 +103,12 @@ ashR.berry.demo <- function(palette_name) {
                         main = paste("Berry ", palette),
                         ylim = c(0, 10), 
                         border = NA)
-      graphics::legend("right",
+      graphics::legend("bottom",
                        legend = berry[[palette]], 
                        xpd = TRUE,
                        col = berry[[palette]],
                        pch = 15, 
-                       bty = "n",
-                       lty = 1,
-                       inset = c(-0.17,0))
+                       bty = "n")
     }
     return(invisible())
   }
@@ -121,14 +119,12 @@ ashR.berry.demo <- function(palette_name) {
                     main = paste("Berry ", palette_name),
                     ylim = c(0, 10), 
                     border = NA)
-  graphics::legend("right",
+  graphics::legend("bottom",
                    legend = berry[[palette]], 
                    xpd = TRUE,
                    col = berry[[palette]],
                    pch = 15, 
-                   bty = "n",
-                   lty = 1,
-                   inset = c(-0.17,0))
+                   bty = "n")
   return(invisible())
   
 }
