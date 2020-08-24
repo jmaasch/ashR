@@ -86,9 +86,7 @@ plot(x,
 
 ```
 
-<p align="right">
-  <img src="https://github.com/jmaasch/ashR/blob/master/figures/base_scatterplot.jpg" width="400"/>
-  </p>
+<img src="https://github.com/jmaasch/ashR/blob/master/figures/base_scatterplot.jpg" width="400" align="right"/>
 
 &#8593; [return to top](#ashR)
 
