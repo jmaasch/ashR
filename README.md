@@ -1,10 +1,10 @@
 # `ashR`
 
-Bespoke interpolated color palettes for data visualization in R.
-
-**Note: This package is currently under development.**
+`ashR` (ash-er): Bespoke interpolated color palettes for data visualization in R.
 
 Author: JRMA Maasch (2020).
+
+**Note: This package is currently under development.**
 
 ## About
 
@@ -20,7 +20,7 @@ This package provides a custom- discrete color palettes in an interpolated range
 devtools::install_github("jmaasch/ashR")
 
 # Load package.
-library(sanzo)
+library(ashR)
 ```
 
 ### View documentation.
