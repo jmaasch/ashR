@@ -20,7 +20,7 @@ Bespoke color palette packages can expedite data visualization tasks. If you wou
 
 ![ridge_grid](https://github.com/jmaasch/ashR/blob/master/figures/ridge_grid.jpg)
 
-*Note on accessibility: These color palettes were customized for use by a color-blind data scientist, though we cannot guarantee usefulness for all color-blind individuals.*
+*Note on accessibility: These color palettes were commissioned by a data scientist with color blindness, though we cannot guarantee usefulness for all individuals with color blindness.*
 
 &#8593; [return to top](#ashR)
 
