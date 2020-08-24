@@ -88,7 +88,8 @@ plot(x,
      xlab = "",
      ylab = "",
      main = "Autumn 1.3", 
-     col = ashR.autumn("1.3"), pch = c(17, 18, 19))
+     col = ashR.autumn("1.3"), 
+     pch = c(17, 18, 19))
 
 ```
 
