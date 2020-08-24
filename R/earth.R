@@ -68,40 +68,36 @@ ashR.earth <- function(palette_name) {
 #'
 ashR.earth.demo <- function(palette_name) {
   
-  # Construct dataframe.
-  df <- data.frame(Value = c(4, 6, 3, 7, 2, 5, 8, 9),
-                   Label = c(1, 2, 3, 4, 5, 6, 7, 8))
-  
-  if (grepl(".5", palette_name, fixed = TRUE)) {
-    df <- data.frame(Value = c(4, 6, 3, 7, 9),
-                     Label = c(1, 2, 3, 4, 5))
-  }
-  else if (grepl(".3", palette_name, fixed = TRUE)) {
-    df <- data.frame(Value = c(4, 6, 9),
-                     Label = c(1, 2, 3))
-  }
-  
-  df$Label <- as.factor(df$Label)
-  
   # If input is "all", print all demo plots.
   if (palette_name == "all") {
+    
+    # Construct dataframes.
+    df8<- data.frame(Value = c(4, 6, 3, 7, 2, 5, 8, 9),
+                     Label = c(1, 2, 3, 4, 5, 6, 7, 8))
+    df8$Label <- as.factor(df8$Label)
+    
+    df5 <- data.frame(Value = c(4, 6, 3, 7, 9),
+                      Label = c(1, 2, 3, 4, 5))
+    df5$Label <- as.factor(df5$Label)
+    
+    df3 <- data.frame(Value = c(4, 6, 9),
+                      Label = c(1, 2, 3))
+    df3$Label <- as.factor(df3$Label)
+    
+    # Loop through all palettes.
     for (palette in names(earth)) {
       
       if (grepl(".8", palette, fixed = TRUE)) {
-        df <- data.frame(Value = c(4, 6, 3, 7, 2, 5, 8, 9),
-                         Label = c(1, 2, 3, 4, 5, 6, 7, 8))
+        df <- df8
       }
       else if (grepl(".5", palette, fixed = TRUE)) {
-        df <- data.frame(Value = c(4, 6, 3, 7, 9),
-                         Label = c(1, 2, 3, 4, 5))
+        df <- df5
       }
       else if (grepl(".3", palette, fixed = TRUE)) {
-        df <- data.frame(Value = c(4, 6, 9),
-                         Label = c(1, 2, 3))
+        df <- df3
       }
-      
-      df$Label <- as.factor(df$Label)
-      
+
+      # Construct and print bar plot. 
       current_plot <- ggplot2::ggplot(df, 
                                       ggplot2::aes(x = Label, 
                                                    y = Value)) +
@@ -124,6 +120,19 @@ ashR.earth.demo <- function(palette_name) {
     return(invisible())
     
   }
+  
+  # Construct dataframe.
+  df <- data.frame(Value = c(4, 6, 3, 7, 2, 5, 8, 9),
+                   Label = c(1, 2, 3, 4, 5, 6, 7, 8))
+  if (grepl(".5", palette_name, fixed = TRUE)) {
+    df <- data.frame(Value = c(4, 6, 3, 7, 9),
+                     Label = c(1, 2, 3, 4, 5))
+  }
+  else if (grepl(".3", palette_name, fixed = TRUE)) {
+    df <- data.frame(Value = c(4, 6, 9),
+                     Label = c(1, 2, 3))
+  }
+  df$Label <- as.factor(df$Label)
   
   # Else print single demo plot.
   single_plot <- ggplot2::ggplot(df, 
