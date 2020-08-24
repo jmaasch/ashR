@@ -15,6 +15,8 @@ This package provides made-to-order discrete color palettes in an interpolated r
 
 Bespoke color palette packages can expedite data visualization tasks. If you would like your own bespoke package, message me at www.linkedin.com/in/jmaasch.
 
+![ridge_grid](https://github.com/jmaasch/ashR/blob/master/figures/ridge_grid.jpg)
+
 *Note on accessibility: These color palettes were customized for use by a color-blind data scientist, though we cannot guarantee usefulness for all color-blind individuals.*
 
 ### Table of contents
