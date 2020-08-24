@@ -4,9 +4,7 @@
 
 ![density_grid](https://github.com/jmaasch/ashR/blob/master/figures/density_grid.jpg)
 
-Author: JRMA Maasch (2020).
-
-*This package is licensed under the GNU General Public License v3.0 (<a href="https://choosealicense.com/licenses/gpl-3.0/" target="_blank">GPL-3</a>).*
+Built by JRMA Maasch (2020). *This package is licensed under the GNU General Public License v3.0 (<a href="https://choosealicense.com/licenses/gpl-3.0/" target="_blank">GPL-3</a>).*
 
 ### Table of contents
 
@@ -23,6 +21,8 @@ Bespoke color palette packages can expedite data visualization tasks. If you wou
 ![ridge_grid](https://github.com/jmaasch/ashR/blob/master/figures/ridge_grid.jpg)
 
 *Note on accessibility: These color palettes were customized for use by a color-blind data scientist, though we cannot guarantee usefulness for all color-blind individuals.*
+
+&#8593; [return to top](#ashR)
 
 ## Usage
 
