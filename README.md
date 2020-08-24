@@ -69,6 +69,27 @@ density_plot <- ggplot(diamonds, aes(carat, fill = cut)) +
 
 ![density_grid](https://github.com/jmaasch/ashR/blob/master/figures/density_grid2.jpg)
 
+&#8593; [return to top](#ashR)
+
+### Use with base R
+
+The following reproducible example produces plots as demonstrated below.
+
+```r
+
+plot(x, 
+     y, 
+     xlab = "",
+     ylab = "",
+     main = "Autumn 1.3", 
+     col = ashR.autumn("1.3"), pch = c(17, 18, 19))
+
+```
+
+![scatter](https://github.com/jmaasch/ashR/blob/master/figures/base_scatterplot.jpg)
+
+&#8593; [return to top](#ashR)
+
 ## View demo plots
 
 ### Autumn
