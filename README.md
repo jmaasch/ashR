@@ -52,7 +52,7 @@ Precede any function by a question mark to access description, arguments, return
 
 ### Use with `ggplot2`
 
-The following reproducible example produces plots as demonstrated below.
+The following reproducible example produces the plots below.
 
 ```r
 
@@ -73,7 +73,7 @@ density_plot <- ggplot(diamonds, aes(carat, fill = cut)) +
 
 ### Use with base R
 
-The following reproducible example produces plots as demonstrated below.
+The following reproducible example produces the plot below.
 
 ```r
 
@@ -86,7 +86,9 @@ plot(x,
 
 ```
 
-![scatter](https://github.com/jmaasch/ashR/blob/master/figures/base_scatterplot.jpg)
+<p align="right">
+  <img src="https://github.com/jmaasch/ashR/blob/master/figures/base_scatterplot.jpg" width="400"/>
+  </p>
 
 &#8593; [return to top](#ashR)
 
