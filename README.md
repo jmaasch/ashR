@@ -41,7 +41,14 @@ Precede any function by a question mark to access description, arguments, return
 
 ## View demo plots
 
+### Autumn
 ![autumn_grid](https://github.com/jmaasch/ashR/blob/master/figures/autumn_grid.jpg)
+
+### Sea
 ![sea_grid](https://github.com/jmaasch/ashR/blob/master/figures/sea_grid.jpg)
+
+### Earth
 ![earth_grid](https://github.com/jmaasch/ashR/blob/master/figures/earth_grid.jpg)
+
+### Berry
 ![berry_grid](https://github.com/jmaasch/ashR/blob/master/figures/berry_grid.jpg)
