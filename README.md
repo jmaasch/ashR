@@ -62,7 +62,7 @@ density_plot <- ggplot(diamonds, aes(carat, fill = cut)) +
                 xlim(0, 3) +
                 scale_fill_manual(values = ashR.earth("5.5")) +
                 theme(axis.title = element_blank(),
-        legend.position = "none") +
+                      legend.position = "none") +
                 labs(title = "Earth 5.5")
 
 ```
