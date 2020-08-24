@@ -21,7 +21,7 @@ Bespoke color palette packages can expedite data visualization tasks. If you wou
 
 ### Table of contents
 
-* **[Usage](#Usage)** &nbsp; | &nbsp; [Installation](#Installation) &nbsp; | &nbsp; [View documentation](#View-documentation)
+* **[Usage](#Usage)** &nbsp; | &nbsp; [Installation](#Installation) &nbsp; | &nbsp; [View documentation](#View-documentation) &nbsp; | &nbsp; [Use with ggplot2](#Use-with-ggplot2) &nbsp; | &nbsp; [Use with base R](#Use-with-base-R)
 * **[View demo plots](#View-demo-plots)** &nbsp; | &nbsp; [Autumn](#Autumn) &nbsp; | &nbsp; [Sea](#Sea) &nbsp; | &nbsp; [Earth](#Earth) &nbsp; | &nbsp; [Berry](#Berry)
 
 ## Usage
@@ -75,6 +75,9 @@ density_plot <- ggplot(diamonds, aes(carat, fill = cut)) +
 
 The following reproducible example produces the plot below.
 
+
+<img src="https://github.com/jmaasch/ashR/blob/master/figures/base_scatterplot.jpg" width="500" align="right"/>
+
 ```r
 
 plot(x, 
@@ -85,8 +88,6 @@ plot(x,
      col = ashR.autumn("1.3"), pch = c(17, 18, 19))
 
 ```
-
-<img src="https://github.com/jmaasch/ashR/blob/master/figures/base_scatterplot.jpg" width="400" align="right"/>
 
 &#8593; [return to top](#ashR)
 
