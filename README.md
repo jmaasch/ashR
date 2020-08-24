@@ -14,8 +14,8 @@ Bespoke color palette packages can expedite data visualization tasks. If you wou
 
 ### Table of contents
 
-* **[Usage](#Usage)** | [Installation](#Installation) | [View documentation](#View-documentation)
-* **[View demo plots](#View-demo-plots)**
+* **[Usage](#Usage)** &nbsp; | &nbsp; [Installation](#Installation) &nbsp; | &nbsp; [View documentation](#View-documentation)
+* **[View demo plots](#View-demo-plots)** &nbsp; | &nbsp; [Autumn](#Autumn) &nbsp; | &nbsp; [Sea](#Sea) &nbsp; | &nbsp; [Earth](#Earth) &nbsp; | &nbsp; [Berry](#Berry)
 
 ## Usage
 
@@ -30,6 +30,8 @@ devtools::install_github("jmaasch/ashR")
 library(ashR)
 ```
 
+&#8593; [return to top](#ashR)
+
 ### View documentation
 
 Precede any function by a question mark to access description, arguments, return value, and usage suggestions.
@@ -39,16 +41,26 @@ Precede any function by a question mark to access description, arguments, return
 ?ashR.autumn()
 ```
 
+&#8593; [return to top](#ashR)
+
 ## View demo plots
 
 ### Autumn
 ![autumn_grid](https://github.com/jmaasch/ashR/blob/master/figures/autumn_grid.jpg)
 
+&#8593; [return to top](#ashR)
+
 ### Sea
 ![sea_grid](https://github.com/jmaasch/ashR/blob/master/figures/sea_grid.jpg)
+
+&#8593; [return to top](#ashR)
 
 ### Earth
 ![earth_grid](https://github.com/jmaasch/ashR/blob/master/figures/earth_grid.jpg)
 
+&#8593; [return to top](#ashR)
+
 ### Berry
 ![berry_grid](https://github.com/jmaasch/ashR/blob/master/figures/berry_grid.jpg)
+
+&#8593; [return to top](#ashR)
