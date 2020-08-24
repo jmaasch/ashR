@@ -117,8 +117,6 @@ ashR.sea.demo <- function(palette_name) {
                                                           size = 16)) +
         ggplot2::labs(title = paste("Sea ", palette))
       
-      print(current_plot)
-      
       # Update plot list.
       plot_list[[i]] <- current_plot
       i <- i + 1

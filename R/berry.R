@@ -117,17 +117,15 @@ ashR.berry.demo <- function(palette_name) {
                                                           size = 16)) +
         ggplot2::labs(title = paste("Berry ", palette))
       
-      print(current_plot)
-      
       # Update plot list.
       plot_list[[i]] <- current_plot
       i <- i + 1
       
-      print(plot_list)
+      print(current_plot)
       
     }
     
-    return(current_plot)
+    return(plot_list)
     
   }
   

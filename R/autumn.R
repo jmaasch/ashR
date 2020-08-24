@@ -51,7 +51,7 @@ ashR.autumn <- function(palette_name) {
 
 }
 
-#' Print a demo plot for autumn-tone color palette.
+#' Print a demo plot for autumnal color palette.
 #'
 #' @param palette_name The short ID for the palette, e.g. "1.8".
 #'
@@ -116,8 +116,6 @@ ashR.autumn.demo <- function(palette_name) {
                        plot.title = ggplot2::element_text(face = "bold",
                                                           size = 16)) +
         ggplot2::labs(title = paste("Autumn ", palette))
-
-      print(current_plot)
 
       # Update plot list.
       plot_list[[i]] <- current_plot

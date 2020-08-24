@@ -5,7 +5,7 @@
 \alias{sea}
 \title{List of watery palettes, 8 or 5 values long.}
 \format{
-An object of class \code{list} of length 25.
+An object of class \code{list} of length 15.
 }
 \usage{
 sea

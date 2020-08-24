@@ -10,7 +10,7 @@ ashR.sea.demo(palette_name)
 \item{palette_name}{The short ID for the palette, e.g. "1.8".}
 }
 \value{
-Void.
+Single plot or list of all plots as ggplot2 objects.
 }
 \description{
 Print a demo plot for watery-tone color palette.

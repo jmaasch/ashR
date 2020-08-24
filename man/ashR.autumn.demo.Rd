@@ -2,7 +2,7 @@
 % Please edit documentation in R/autumn.R
 \name{ashR.autumn.demo}
 \alias{ashR.autumn.demo}
-\title{Print a demo plot for autumn-tone color palette.}
+\title{Print a demo plot for autumnal color palette.}
 \usage{
 ashR.autumn.demo(palette_name)
 }
@@ -10,10 +10,10 @@ ashR.autumn.demo(palette_name)
 \item{palette_name}{The short ID for the palette, e.g. "1.8".}
 }
 \value{
-Void.
+Single plot or list of all plots as ggplot2 objects.
 }
 \description{
-Print a demo plot for autumn-tone color palette.
+Print a demo plot for autumnal color palette.
 }
 \examples{
 # Print demo plot for single autumn palette.
