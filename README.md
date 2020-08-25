@@ -54,13 +54,6 @@ Precede any function by a question mark to access description, arguments, return
 ?ashR.autumn()
 ```
 
-Demo plots can be viewed by invoking `ashR.autumn.demo()`, `ashR.berry.demo()`, `ashR.earth.demo()`, `ashR.sea.demo()` functions. Valid inputs include any single palette name as a string (e.g. `"1.5"`) or `"all"` to print demo plots for all palettes. All demo plots can be viewed [here](#View-demo-plots).
-
-```R
-ashR.autumn.demo("1.3")
-ashR.berry.demo("all")
-```
-
 This package contains 4 "classes" of palettes: `autumn`, `berry`, `earth`, and `sea`. Each "class" contains 5 palettes (`1` through `5`) available in three lengths (3, 5, and 8), such that `berry` palette `1.8` is the 8-hue version of the 5-hue `berry` palette `1.5`. All palettes are stored in exported lists:
 
 ```R
@@ -73,6 +66,22 @@ This package contains 4 "classes" of palettes: `autumn`, `berry`, `earth`, and `
 > names(autumn)
  [1] "1.8" "2.8" "3.8" "4.8" "5.8" "1.5" "2.5" "3.5" "4.5" "5.5" "1.3" "2.3" "3.3" "4.3" "5.3"
 > 
+```
+
+To use a palette, pass the desired palette name as a string to one of the following functions:
+
+```R
+autumn_palette <- ashR.autumn("1.3")
+berry_palette <- ashR.berry("2.5")
+earth_palette <- ashR.earth("1.8")
+sea_palette <- ashR.sea("4.3")
+```
+
+Demo plots can be viewed by invoking `ashR.autumn.demo()`, `ashR.berry.demo()`, `ashR.earth.demo()`, and `ashR.sea.demo()` functions. Valid inputs include any single palette name as a string (e.g. `"1.5"`) or `"all"` to print demo plots for all palettes. All demo plots can be viewed [here](#View-demo-plots).
+
+```R
+ashR.autumn.demo("1.3")
+ashR.berry.demo("all")
 ```
 
 Hexadecimal color codes are accessible as shown below. Demo plots also feature hexadecimal legends for convenience. Hex values may be "cherry-picked" to create custom palettes.
