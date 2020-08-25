@@ -112,7 +112,7 @@ density_plot <- ggplot(diamonds, aes(carat, fill = cut)) +
 
 ```
 
-![density_grid](https://github.com/jmaasch/ashR/blob/master/figures/density_grid2.jpg)
+![density_grid](https://github.com/jmaasch/ashR/blob/master/figures/density_grid4.jpg)
 
 &#8593; [return to top](#ashR)
 
