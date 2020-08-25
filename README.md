@@ -77,25 +77,46 @@ density_plot <- ggplot(diamonds, aes(carat, fill = cut)) +
 
 &#8593; [return to top](#ashR)
 
-<img src="https://github.com/jmaasch/ashR/blob/master/figures/base_scatterplot.jpg" width="400" align="right"/>
+<img src="https://github.com/jmaasch/ashR/blob/master/figures/line.jpg" width="400" align="right"/>
 
 ### Use with base R
 
-The following reproducible example produces the plot below.
+The following reproducible example produces the plot at right.
 
 
 ```r
 
-x <- rnorm(800)
-y <- rnorm(800) 
+# Construct toy data.
+set.seed(5)
+x <- 1:100
+y1 <- cumsum(rnorm(100))
+set.seed(19)
+y2 <- cumsum(rnorm(100))
+set.seed(24)
+y3 <- cumsum(rnorm(100))
+data <- data.frame(y1, y2, y3)
 
-plot(x, 
-     y, 
-     xlab = "",
-     ylab = "",
-     main = "Autumn 1.3", 
-     col = ashR.autumn("1.3"), 
-     pch = c(17, 18, 19))
+# Construct line plot.
+plot(y1, 
+     type = "l", 
+     xlim = c(0, 100),
+     ylim = c(-15, 15),
+     xlab = "", 
+     ylab = "", 
+     col = ashR.berry("2.3")[1],
+     lty = 1,
+     lwd = 2,
+     main = "Berry 2.3")
+lines(y2, 
+      type = "l", 
+      col = ashR.berry("2.3")[2], 
+      lty = 3,
+      lwd = 3)
+lines(y3, 
+      type = "l", 
+      col = ashR.berry("2.3")[3],
+      lty = 5,
+      lwd = 2)
 
 ```
 
