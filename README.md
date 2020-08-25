@@ -94,7 +94,6 @@ set.seed(19)
 y2 <- cumsum(rnorm(100))
 set.seed(24)
 y3 <- cumsum(rnorm(100))
-data <- data.frame(y1, y2, y3)
 
 # Construct line plot.
 plot(y1, 
