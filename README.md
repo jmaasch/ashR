@@ -2,13 +2,13 @@
 
 ### `ashR` *(ash-er)*: Bespoke interpolated color palettes for data visualization in R.
 
-![density_grid](https://github.com/jmaasch/ashR/blob/master/figures/density_grid.jpg)
+Built by JRMA Maasch (2020).
 
-Built by JRMA Maasch (2020). *This package is licensed under the GNU General Public License v3.0 (<a href="https://choosealicense.com/licenses/gpl-3.0/" target="_blank">GPL-3</a>).*
+![density_grid](https://github.com/jmaasch/ashR/blob/master/figures/density_grid.jpg)
 
 ### Table of contents
 
-* **[About](#About)**
+* **[About](#About)** &nbsp; | &nbsp; [Accessibility](#Accessibility) &nbsp; | &nbsp; [License](#License)
 * **[Usage](#Usage)** &nbsp; | &nbsp; [Installation](#Installation) &nbsp; | &nbsp; [View documentation](#View-documentation) &nbsp; | &nbsp; [Use with ggplot2](#Use-with-ggplot2) &nbsp; | &nbsp; [Use with base R](#Use-with-base-R)
 * **[View demo plots](#View-demo-plots)** &nbsp; | &nbsp; [Autumn](#Autumn) &nbsp; | &nbsp; [Sea](#Sea) &nbsp; | &nbsp; [Earth](#Earth) &nbsp; | &nbsp; [Berry](#Berry)
 
@@ -20,7 +20,13 @@ Bespoke color palette packages can expedite data visualization tasks. If you wou
 
 ![ridge_grid](https://github.com/jmaasch/ashR/blob/master/figures/ridge_grid.jpg)
 
-*Note on accessibility: These color palettes were commissioned by a data scientist with color blindness, though we cannot guarantee usefulness for all individuals with color blindness.*
+### Accessibility
+
+These color palettes were commissioned by a data scientist with color blindness, though we cannot guarantee usefulness for all individuals with color blindness.
+
+### License
+
+This package is licensed under the GNU General Public License v3.0 (<a href="https://choosealicense.com/licenses/gpl-3.0/" target="_blank">GPL-3</a>).
 
 &#8593; [return to top](#ashR)
 
