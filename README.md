@@ -9,7 +9,7 @@ Built by JRMA Maasch (2020).
 ### Table of contents
 
 * **[About](#About)** &nbsp; | &nbsp; [Accessibility](#Accessibility) &nbsp; | &nbsp; [License](#License)
-* **[Usage](#Usage)** &nbsp; | &nbsp; [Installation](#Installation) &nbsp; | &nbsp; [View documentation](#View-documentation) &nbsp; | &nbsp; [Use with ggplot2](#Use-with-ggplot2) &nbsp; | &nbsp; [Use with base R](#Use-with-base-R)
+* **[Usage](#Usage)** &nbsp; | &nbsp; [Installation](#Installation) &nbsp; | &nbsp; [Documentation](#Documentation) &nbsp; | &nbsp; [Use with ggplot2](#Use-with-ggplot2) &nbsp; | &nbsp; [Use with base R](#Use-with-base-R)
 * **[View demo plots](#View-demo-plots)** &nbsp; | &nbsp; [Autumn](#Autumn) &nbsp; | &nbsp; [Sea](#Sea) &nbsp; | &nbsp; [Earth](#Earth) &nbsp; | &nbsp; [Berry](#Berry)
 
 ## About
@@ -45,7 +45,7 @@ library(ashR)
 
 &#8593; [return to top](#ashR)
 
-### View documentation
+### Documentation
 
 Precede any function by a question mark to access description, arguments, return value, and usage suggestions. **Vignette and further documentation coming soon.**
 
