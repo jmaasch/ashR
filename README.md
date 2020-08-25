@@ -57,15 +57,14 @@ Precede any function by a question mark to access description, arguments, return
 This package contains 4 "classes" of palettes: `autumn`, `berry`, `earth`, and `sea`. Each "class" contains 5 palettes (`1` through `5`) available in three lengths (3, 5, and 8), such that `berry` palette `1.8` is the 8-hue version of the 5-hue `berry` palette `1.5`. All palettes are stored in exported lists:
 
 ```R
+> names(autumn)
+ [1] "1.8" "2.8" "3.8" "4.8" "5.8" "1.5" "2.5" "3.5" "4.5" "5.5" "1.3" "2.3" "3.3" "4.3" "5.3"
 > names(berry)
  [1] "1.8" "2.8" "3.8" "4.8" "5.8" "1.5" "2.5" "3.5" "4.5" "5.5" "1.3" "2.3" "3.3" "4.3" "5.3"
 > names(earth)
  [1] "1.8" "2.8" "3.8" "4.8" "5.8" "1.5" "2.5" "3.5" "4.5" "5.5" "1.3" "2.3" "3.3" "4.3" "5.3"
 > names(sea)
  [1] "1.8" "2.8" "3.8" "4.8" "5.8" "1.5" "2.5" "3.5" "4.5" "5.5" "1.3" "2.3" "3.3" "4.3" "5.3"
-> names(autumn)
- [1] "1.8" "2.8" "3.8" "4.8" "5.8" "1.5" "2.5" "3.5" "4.5" "5.5" "1.3" "2.3" "3.3" "4.3" "5.3"
-> 
 ```
 
 To use a palette, pass the desired palette name as a string to one of the following functions:
@@ -128,7 +127,6 @@ The following reproducible example produces the plot at right.
 
 # Construct toy data.
 set.seed(5)
-x <- 1:100
 y1 <- cumsum(rnorm(100))
 set.seed(19)
 y2 <- cumsum(rnorm(100))
