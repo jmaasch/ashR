@@ -78,6 +78,8 @@ density_plot <- ggplot(diamonds, aes(carat, fill = cut)) +
 &#8593; [return to top](#ashR)
 
 <img src="https://github.com/jmaasch/ashR/blob/master/figures/line.jpg" width="400" align="right"/>
+<br><br>
+<img src="https://github.com/jmaasch/ashR/blob/master/figures/line2.jpg" width="400" align="right"/>
 
 ### Use with base R
 
