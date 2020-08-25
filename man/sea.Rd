@@ -3,7 +3,7 @@
 \docType{data}
 \name{sea}
 \alias{sea}
-\title{List of watery palettes, 8 or 5 values long.}
+\title{List of watery palettes. Palettes are 5, 3, or 8 values long.}
 \format{
 An object of class \code{list} of length 15.
 }
@@ -11,6 +11,6 @@ An object of class \code{list} of length 15.
 sea
 }
 \description{
-List of watery palettes, 8 or 5 values long.
+List of watery palettes. Palettes are 5, 3, or 8 values long.
 }
 \keyword{datasets}

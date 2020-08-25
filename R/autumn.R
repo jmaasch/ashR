@@ -1,4 +1,4 @@
-#' List of autumnal palettes, 8 or 5 values long.
+#' List of autumnal palettes. Palettes are 5, 3, or 8 values long.
 #'
 #' @export
 #'
@@ -163,3 +163,6 @@ ashR.autumn.demo <- function(palette_name) {
   return(single_plot)
 
 }
+
+# Define global variables.
+utils::globalVariables(c("Label", "Value"))

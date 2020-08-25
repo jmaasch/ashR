@@ -3,7 +3,7 @@
 \docType{data}
 \name{autumn}
 \alias{autumn}
-\title{List of autumnal palettes, 8 or 5 values long.}
+\title{List of autumnal palettes. Palettes are 5, 3, or 8 values long.}
 \format{
 An object of class \code{list} of length 15.
 }
@@ -11,6 +11,6 @@ An object of class \code{list} of length 15.
 autumn
 }
 \description{
-List of autumnal palettes, 8 or 5 values long.
+List of autumnal palettes. Palettes are 5, 3, or 8 values long.
 }
 \keyword{datasets}

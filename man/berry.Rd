@@ -3,7 +3,7 @@
 \docType{data}
 \name{berry}
 \alias{berry}
-\title{List of berry palettes, 8 or 5 values long.}
+\title{List of berry palettes. Palettes are 5, 3, or 8 values long.}
 \format{
 An object of class \code{list} of length 15.
 }
@@ -11,6 +11,6 @@ An object of class \code{list} of length 15.
 berry
 }
 \description{
-List of berry palettes, 8 or 5 values long.
+List of berry palettes. Palettes are 5, 3, or 8 values long.
 }
 \keyword{datasets}

@@ -3,7 +3,7 @@
 \docType{data}
 \name{earth}
 \alias{earth}
-\title{List of earth-tone palettes, 8 or 5 values long.}
+\title{List of earth-tone palettes. Palettes are 5, 3, or 8 values long.}
 \format{
 An object of class \code{list} of length 15.
 }
@@ -11,6 +11,6 @@ An object of class \code{list} of length 15.
 earth
 }
 \description{
-List of earth-tone palettes, 8 or 5 values long.
+List of earth-tone palettes. Palettes are 5, 3, or 8 values long.
 }
 \keyword{datasets}

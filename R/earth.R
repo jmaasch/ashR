@@ -1,13 +1,13 @@
-#' List of earth-tone palettes, 8 or 5 values long.
+#' List of earth-tone palettes. Palettes are 5, 3, or 8 values long.
 #'
 #' @export
 #'
 earth <- list(
-  "1.8" = c("#410005FF", "#581F24FF", "#703F43FF", "#885F62FF", 
+  "1.8" = c("#410005FF", "#581F24FF", "#703F43FF", "#885F62FF",
             "#A07F82FF", "#B79FA1FF", "#CFBFC0FF", "#E7DFDFFF"),
-  "2.8" = c("#71260AFF", "#824128FF", "#945C47FF", "#A67765FF", 
+  "2.8" = c("#71260AFF", "#824128FF", "#945C47FF", "#A67765FF",
             "#B89284FF", "#C9ADA3FF", "#DBC8C1FF", "#EDE3E0FF"),
-  "3.8" = c("#6A3F48FF", "#7C575EFF", "#8F6F75FF", "#A1878CFF", 
+  "3.8" = c("#6A3F48FF", "#7C575EFF", "#8F6F75FF", "#A1878CFF",
             "#B49FA3FF", "#C7B7BAFF", "#D9CFD1FF", "#ECE7E8FF"),
   "4.8" = c("#3D3B39FF", "#555351FF", "#6D6B6AFF", "#858483FF",
             "#9D9C9BFF", "#B5B5B4FF", "#CDCDCDFF", "#E6E6E6FF"),
@@ -46,9 +46,9 @@ earth <- list(
 #' @export
 #'
 ashR.earth <- function(palette_name) {
-  
+
   return(earth[[palette_name]])
-  
+
 }
 
 #' Print a demo plot for earth-tone color palette.
@@ -60,37 +60,37 @@ ashR.earth <- function(palette_name) {
 #' @examples
 #' # Print demo plot for single earth palette.
 #' ashR.earth("5.5")
-#' 
+#'
 #' # Print demo plots for all earth palettes.
 #' ashR.earth("all")
 #'
 #' @export
 #'
 ashR.earth.demo <- function(palette_name) {
-  
+
   # If input is "all", print all demo plots.
   if (palette_name == "all") {
-    
+
     # Construct dataframes.
     df8<- data.frame(Value = c(4, 6, 3, 7, 2, 5, 8, 9),
                      Label = c(1, 2, 3, 4, 5, 6, 7, 8))
     df8$Label <- as.factor(df8$Label)
-    
+
     df5 <- data.frame(Value = c(4, 6, 3, 7, 9),
                       Label = c(1, 2, 3, 4, 5))
     df5$Label <- as.factor(df5$Label)
-    
+
     df3 <- data.frame(Value = c(4, 6, 9),
                       Label = c(1, 2, 3))
     df3$Label <- as.factor(df3$Label)
-    
+
     # Init empty list for plots.
     plot_list <- vector("list", 15)
     i <- 1
-    
+
     # Loop through all palettes.
     for (palette in names(earth)) {
-      
+
       if (grepl(".8", palette, fixed = TRUE)) {
         df <- df8
       }
@@ -101,14 +101,14 @@ ashR.earth.demo <- function(palette_name) {
         df <- df3
       }
 
-      # Construct and print bar plot. 
-      current_plot <- ggplot2::ggplot(df, 
-                                      ggplot2::aes(x = Label, 
+      # Construct and print bar plot.
+      current_plot <- ggplot2::ggplot(df,
+                                      ggplot2::aes(x = Label,
                                                    y = Value)) +
-        ggplot2::geom_bar(stat = "identity", 
+        ggplot2::geom_bar(stat = "identity",
                           ggplot2::aes(fill = Label)) +
         ggthemes::theme_tufte() +
-        ggplot2::scale_fill_manual(values = earth[[palette]], 
+        ggplot2::scale_fill_manual(values = earth[[palette]],
                                    labels = earth[[palette]]) +
         ggplot2::theme(axis.title.x = ggplot2::element_blank(),
                        axis.title.y = ggplot2::element_blank(),
@@ -116,19 +116,19 @@ ashR.earth.demo <- function(palette_name) {
                        plot.title = ggplot2::element_text(face = "bold",
                                                           size = 16)) +
         ggplot2::labs(title = paste("Earth ", palette))
-      
+
       # Update plot list.
       plot_list[[i]] <- current_plot
       i <- i + 1
-      
+
       print(current_plot)
-      
+
     }
-    
+
     return(plot_list)
-    
+
   }
-  
+
   # Construct dataframe.
   df <- data.frame(Value = c(4, 6, 3, 7, 2, 5, 8, 9),
                    Label = c(1, 2, 3, 4, 5, 6, 7, 8))
@@ -141,15 +141,15 @@ ashR.earth.demo <- function(palette_name) {
                      Label = c(1, 2, 3))
   }
   df$Label <- as.factor(df$Label)
-  
+
   # Else print single demo plot.
-  single_plot <- ggplot2::ggplot(df, 
-                                 ggplot2::aes(x = Label, 
+  single_plot <- ggplot2::ggplot(df,
+                                 ggplot2::aes(x = Label,
                                               y = Value)) +
-    ggplot2::geom_bar(stat = "identity", 
+    ggplot2::geom_bar(stat = "identity",
                       ggplot2::aes(fill = Label)) +
     ggthemes::theme_tufte() +
-    ggplot2::scale_fill_manual(values = earth[[palette_name]], 
+    ggplot2::scale_fill_manual(values = earth[[palette_name]],
                                labels = earth[[palette_name]]) +
     ggplot2::theme(axis.title.x = ggplot2::element_blank(),
                    axis.title.y = ggplot2::element_blank(),
@@ -157,9 +157,12 @@ ashR.earth.demo <- function(palette_name) {
                    plot.title = ggplot2::element_text(face = "bold",
                                                       size = 16)) +
     ggplot2::labs(title = paste("Earth ", palette_name))
-  
+
   print(single_plot)
-  
+
   return(single_plot)
-  
+
 }
+
+# Define global variables.
+utils::globalVariables(c("Label", "Value"))
